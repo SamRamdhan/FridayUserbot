@@ -24,14 +24,14 @@ async def set_not_afk(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                "#AfkLogger My Boss Went Afk"
+                "#AfkLogger Hai bos welkam bek"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
                 "Please set `PLUGIN_CHANNEL` " + \
                 "for the proper functioning of afk functionality " + \
-                "in @FridayOT\n\n `{}`".format(str(e)),
+                "in @canzu\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True
             )
@@ -61,15 +61,15 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
-            await event.edit(f"My Boss Is Going Afk ! And The Reason is {reason}")
+            await event.edit(f"Boss saya sekarang AFK! Karena mau {reason}")
         else:
-            await event.edit(f"My Boss is Going")
+            await event.edit(f"Boss saya sedang AFK")
         await asyncio.sleep(5)
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                f"#AfkLogger Reason : {reason}"
+                f"#AfkLogger Hai bos selamat : {reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
@@ -85,7 +85,7 @@ async def on_afk(event):
     global USER_AFK  # pylint:disable=E0602
     global afk_time  # pylint:disable=E0602
     global last_afk_message  # pylint:disable=E0602
-    afk_since = "`a while ago`"
+    afk_since = "`Aduh lupa aing`"
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
         # userbot's should not reply to other userbot's
@@ -104,7 +104,7 @@ async def on_afk(event):
             time %= 60
             seconds = time
             if days == 1:
-                afk_since = "**Yesterday**"
+                afk_since = "**Kemarin**"
             elif days > 1:
                 if days > 6:
                     date = now + \
@@ -121,10 +121,10 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"**My Boss is AFK** ! \n\n**Reason** : `{reason}` \n\n**Afk Since** : {afk_since}" + \
-            f"\n\n__Kindly Leave A Message__ ! \n`He Will Reply To You Soon !`" \
+        message_to_reply = f"**Boss saya lagi AFK** ! \n\n**Karena lagi** : `{reason}` \n\n**AFK Sejak** : {afk_since}" + \
+            f"\n\n__Sabar aja yah__ ! \n`Nanti juga dia aktif kok!`" \
             if reason \
-            else f"**Hello, Boss Is AFK Right Now And May Be Forgot List Reason ! Any Way He Will Come Back Soon !**"
+            else f"**Hmm. Boss saya lagi AFK tapi ga ngasih tau mo ngapain! Bentar lagi kayaknya dia aktif!**"
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
