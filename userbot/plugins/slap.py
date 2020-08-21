@@ -13,64 +13,64 @@ from telethon.tl.types import MessageEntityMentionName
 from userbot import ALIVE_NAME
 
 SLAP_TEMPLATES = [
-    "{user1} {hits} {user2} with a {item}.",
-    "{user1} {hits} {user2} in the face with a {item}.",
-    "{user1} {hits} {user2} around a bit with a {item}.",
-    "{user1} {throws} a {item} at {user2}.",
-    "{user1} grabs a {item} and {throws} it at {user2}'s face.",
-    "{user1} launches a {item} in {user2}'s general direction.",
-    "{user1} starts slapping {user2} silly with a {item}.",
-    "{user1} pins {user2} down and repeatedly {hits} them with a {item}.",
-    "{user1} grabs up a {item} and {hits} {user2} with it.",
-    "{user1} ties {user2} to a chair and {throws} a {item} at them.",
-    "{user1} gave a friendly push to help {user2} learn to swim in lava."
+    "{user1} {hits} {user2} memakai {item}.",
+    "{user1} {hits} {user2} dengan keras menggunakan {item}.",
+    "{user1} {hits} {user2} menggunakan {item}.",
+    "{user1} {throws} sebuah {item} ke wajah {user2}.",
+    "{user1} mengambil {item} kemudian {throws} ke {user2} menembus otaknya",
+    "{user1} melempar {item} ke {user2} hingga sekarat.",
+    "{user1} memfitnah {user2} telah mencuri {item}.",
+    "{user1} berdiri dibelakang {user2} kemudian {hits} menggunakan {item}.",
+    "{user1} meraih sebuah {item} lalu {hits} {user2} dengan keras.",
+    "{user1} membanting {user2} ke lantai kemudian {throws} sebuah {item} hingga ujung usia.",
+    "{user1} mendorong dengan keras {user2} ke jurang penyesalan paling dalam."
 ]
 
 ITEMS = [
-    "cast iron skillet",
-    "large trout",
-    "baseball bat",
-    "cricket bat",
-    "wooden cane",
-    "nail",
-    "printer",
-    "shovel",
-    "CRT monitor",
-    "physics textbook",
-    "toaster",
-    "portrait of Richard Stallman",
-    "television",
-    "five ton truck",
-    "roll of duct tape",
-    "book",
-    "laptop",
-    "old television",
-    "sack of rocks",
-    "rainbow trout",
-    "rubber chicken",
-    "spiked bat",
-    "fire extinguisher",
-    "heavy rock",
-    "chunk of dirt",
-    "beehive",
-    "piece of rotten meat",
-    "bear",
-    "ton of bricks",
+    "majalah bobo",
+    "sendal swallow",
+    "helm gojek",
+    "TV tabung",
+    "HP nokia jadul",
+    "batu bata",
+    "panci panas",
+    "tameng Brimob",
+    "pentungan hansip",
+    "powerbank",
+    "sepatu laras",
+    "spion kopaja",
+    "patung Hitler",
+    "ranting pohon",
+    "semvak firaun",
+    "roda becak",
+    "velg NMAX",
+    "tromol ninja",
+    "stang motor supra",
+    "galon AQUA",
+    "botol marjan",
+    "ransel Tentara",
+    "sepatu Polisi",
+    "tumpukan batako",
+    "wajan gosong",
+    "sepeda lipat",
+    "mesin las",
+    "ban truk",
+    "gesper Kopassus",
 ]
 
 THROW = [
-    "throws",
-    "flings",
-    "chucks",
-    "hurls",
+    "memukulkan",
+    "melemparkan",
+    "menamparkan",
+    "memukulkan",
 ]
 
 HIT = [
-    "hits",
-    "whacks",
-    "slaps",
-    "smacks",
-    "bashes",
+    "memukul",
+    "menggeplak",
+    "menampol",
+    "menampar",
+    "menghantam",
 ]
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "FridayUserbot"
@@ -90,7 +90,7 @@ async def who(event):
         await event.edit(caption)
 
     except:
-        await event.edit("`Can't slap this nibba !!`")
+        await event.edit("`Makhluk halus gabisa dislap!!`")
 
 async def get_user(event):
     if event.reply_to_msg_id:
@@ -118,7 +118,7 @@ async def get_user(event):
             replied_user = await event.client(GetFullUserRequest(user_object.id))
 
         except (TypeError, ValueError):
-            await event.edit("`I don't slap strangers !!`")
+            await event.edit("`Ga bisa ngeslap Hantu!!`")
             return None
 
     return replied_user
