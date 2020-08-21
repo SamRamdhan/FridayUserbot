@@ -39,7 +39,7 @@ async def _(event):
     if event.fwd_from:
         return
     if not event.is_reply:
-        await event.edit("Reply to a photo to add to my personal sticker pack.")
+        await event.edit("Reply gambar untuk memasukkan ke pack anda.")
         return
     reply_message = await event.get_reply_message()
     sticker_emoji = "😎"
@@ -60,7 +60,7 @@ async def _(event):
     else:
         packname = f"{user.username}'s {pack}"
         packshortname = f"FRIDAY_{userid}_Pack"
-    await event.edit("`Wew ! I Love That Sticker ! Mind If i Kang It ?`")
+    await event.edit("`Yeah ! Saya suka ini ! Bolehkah saya menyimpannya ?`")
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@FRIDAYOT.png"
@@ -84,7 +84,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("Packing To Your Pack ! Please Wait!")
+    await event.edit("Memasukkan ke pack! Bentar yah!")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -194,7 +194,7 @@ async def _(event):
                 await silently_send_message(bot_conv, response)
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
-    await event.edit(f"**Sticker Has Been Kanged SucessFully And Can Be Found** [Here](t.me/addstickers/{packshortname})")
+    await event.edit(f"**Stiker sukses ditambahkan ke pack** [disini](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
