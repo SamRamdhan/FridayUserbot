@@ -15,7 +15,7 @@ FONT_FILE_TO_USE = "Fonts/digital.ttf"
 async def _(event):
     if event.fwd_from:
         return
-    current_time = datetime.now().strftime("FRIDAY TIMEZONE \nLOCATION: India \nTime: %H:%M:%S \nDate: %d.%m.%y")
+    current_time = datetime.now().strftime("CANZU GABUT\nLOKASI : MAKASSAR \nWAKTU : %H:%M:%S \nTANGGAL: %d.%m.%y")
     start = datetime.now()
     input_str = event.pattern_match.group(1)
     reply_msg_id = event.message.id
@@ -43,7 +43,7 @@ async def _(event):
     os.remove(required_file_name)
     end = datetime.now()
     time_taken_ms = (end - start).seconds
-    await event.edit("Created sticker in {} seconds".format(time_taken_ms))
+    await event.edit("Membuat stiker dalam {} seconds".format(time_taken_ms))
     await asyncio.sleep(5)
     await event.delete()
 
