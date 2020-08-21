@@ -28,20 +28,20 @@ async def _(event):
             return
         if event.is_private:
          
-         PM = ("`Hello. You are accessing the availabe menu of my peru master,`"
+         PM = ("`Hai. Anda mengakses menu untuk memilih tindakan kepada Boss saya,`"
                f"{DEFAULTUSER}.\n"
-               "__Let's make this smooth and let me know why you are here ! So Select A Reason And Send it's Number__\n"
-               "**Choose one of the following reasons why you are here:**\n\n"
-               "`1`. To chat with my master\n"
-               "`2`. To Spam my master's Inbox.\n"
+               "__Ayo lakukan ini dengan mudah dan bijak! Silahkan pilih angka berisi alasan__\n"
+               "**Ketik salah satu angka tindakan apa yang akan anda lakukan:**\n\n"
+               "`1`. Untuk chat dengan Boss saya.\n"
+               "`2`. Hanya mau spam saja.\n"
 
-               "`3`. To enquire something\n"
-               "`4`. To request something\n")
-         ONE = ("`I Have Registered Your Request ! Don't Worry My Master Will Be Here Soon To Chat With You !` \n\n")
-         TWO = ("`Please Don't Spam My Master Inbox ! You Have Been Reported Until Further Notice !`")
-         FOUR = ("`Okay ! I See You Can Request Your Demands ! Please Wait Untill My Master Approves You` !")
-         FIVE = ("`Okay. please have the basic manners as to not bother my master too much. If he wishes to help you, he will respond to you soon.`\n**Kindly Do not ask repeatdly else you will be blocked and reported.**")
-         LWARN = ("**This is your last warning. DO NOT send another message else you will be blocked and reported. Keep patience. My master will respond you ASAP.**\n__Use__ `/start` __to go back to the main menu.__")
+               "`3`. Untuk bertanya sesuatu.\n"
+               "`4`. Untuk meminta sesuatu.\n")
+         ONE = ("`Oke permintaanmu diterima! Boss saya akan segera kembali untuk membalas chat anda!` \n\n")
+         TWO = ("`Jangan lakukan hal itu! Atau kontak anda akan block!`")
+         FOUR = ("`Baiklah! Saya paham apa yang anda inginkan! Tunggulah sampai Boss saya memberi anda akses!`")
+         FIVE = ("`Okelah. Harap anda menjaga sopan santun kepada Boss saya. Jika dia ingin membantu, dia pasti akan merespon anda.`\n**Jangan lakukan hal yang mengganggu jika anda tidak ingin dilaporkan dan diblok.**")
+         LWARN = ("**Ini perintah terakhir. Jangan asal kirim pesan atau anda akan saya laporkan dan blok. Harap mengerti. Boss saya pasti akan merespon anda nanti.**\n__Use__ /start __untuk kembali ke menu pilihan.__")
      
         async with borg.conversation(chat) as conv:
          await borg.send_message(chat, PM)
