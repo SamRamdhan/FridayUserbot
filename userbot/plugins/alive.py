@@ -6,19 +6,19 @@ from uniborg.util import admin_cmd
 from userbot import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
-PM_IMG = "https://telegra.ph/file/22535f8051a58af113586.jpg"
-pm_caption = "`FRIDAY IS:` **ONLINE**\n\n"
+PM_IMG = "https://telegra.ph/file/8d46fbd66258615e05503.jpg"
+pm_caption = "`CANZUGABUT IS:` **ONLINE**\n\n"
 pm_caption += "**SYSTEM STATUS**\n"
 pm_caption += "`TELETHON VERSION:` **6.0.9**\n`Python:` **3.7.4**\n"
 pm_caption += "`DATABASE STATUS:` **Functional**\n"
 pm_caption += "**Current Branch** : `master`\n"
-pm_caption += "**Friday OS** : `3.14`\n"
-pm_caption += "**Current Sat** : `StarkGangSat-2.25`\n"
+pm_caption += "**Canzu OS** : `3.14`\n"
+pm_caption += "**Current Sat** : `CanzuGabutSat-2.25`\n"
 pm_caption += f"**My Boss** : {DEFAULTUSER} \n"
 pm_caption += "**Heroku Database** : `AWS - Working Properly`\n\n"
-pm_caption += "**License** : [MIT Licence](github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n"
-pm_caption += "Copyright : By [StarkGang@Github](GitHub.com/StarkGang)\n"
-pm_caption += " [Deploy FridayUserbot](https://telegra.ph/FRIDAY-06-15)"
+pm_caption += "• [MIT Licence](github.com/StarkGang/FridayUserbot/blob/master/LICENSE)\n"
+pm_caption += "• [Copyright](GitHub.com/StarkGang)\n"
+pm_caption += "• [Deploy Userbot](https://telegra.ph/FRIDAY-06-15)"
 
 @borg.on(admin_cmd(pattern=r"alive"))
 async def friday(alive):
