@@ -3,13 +3,13 @@ import random, re
 from uniborg.util import admin_cmd
 
 METOOSTR = [
-    "`Me too thanks`",
-    "`Haha yes, me too`",
-    "`Same lol`",
-    "`Me irl`",
-    "`Same here`",
-    "`Haha yes`",
-    "`Same pinch bsdk`",
+    "`Cobalah berkaca, maka kamu akan tau arti segalanya bagiku.`",
+    "`Izinkan aku menyebut doamu didalam doaku kepada Tuhan untuk kuminta sebagai jodohku.`",
+    "`Aku benci ketika harus berbohong bahwa aku tidak mencintaimu.`",
+    "`Walaupun ditawari seluruh bidadari surga untuk menemaniku, aku menolak. Aku hanya ingin kamu.`",
+    "`Taukah pelangi yang sering kupandangi ketika hujan reda? Iya malu menampakkan diri lagi ketika kuceritakan bahwa cantikmu melebihi keindahannya.`",
+    "`Ikan hiu sedang laper, i lop yu poreper. Wkwkwk`",
+    "`Soekarno berkata : Berikan aku 10 pemuda maka akan kugoncangkan dunia. Kalau aku cuma butuh kamu menemaniku, maka akan kubuat 10 pemuda.`",
 ]
 RUNSREACTS = [
     "`Runs to Thanos`",
@@ -50,8 +50,8 @@ GEY_STRINGS = [
      "`you gey go away`",
 ]
 PRO_STRINGS = [
-     "`This gey is pro as phack.`",
-     "`Pros here -_- Time to Leave`",
+     "`Iya bang jago.`",
+     "`Jagoan datang-_- Waktunya pergi`",
 ]
 INSULT_STRINGS = [ 
     "`Jangan khawatir soal virus yang menyerang otak... kamu kan gapunya otak.`",
@@ -62,27 +62,27 @@ INSULT_STRINGS = [
     "`Jangan percaya ketika orang mengatakan kamu hebat. Itu hoax.`",
     "`Bisa minta tolong? Bantu saya menemukan otakmu.`",
     "`Kelakuanmu memang pantas untuk menjadi penghuni kekal neraka jahannam.`",
-    "`You didn't evolve from apes, they evolved from you.`",
-    "`What language are you speaking? Cause it sounds like bullshit.`",
-    "`You are proof that evolution CAN go in reverse.`",
-    "`I would ask you how old you are but I know you can't count that high.`",
-    "`As an outsider, what do you think of the human race?`",
-    "`Ordinarily people live and learn. You just live.`",
-    "`Keep talking, someday you'll say something intelligent!.......(I doubt it though)`",
-    "`Everyone has the right to be stupid but you are abusing the privilege.`",
-    "`I'm sorry I hurt your feelings when I called you stupid. I thought you already knew that.`",
-    "`You should try tasting cyanide.`",
-    "`You should try sleeping forever.`",
-    "`Pick up a gun and shoot yourself.`",
-    "`Try bathing with Hydrochloric Acid instead of water.`",
-    "`Go Green! Stop inhaling Oxygen.`",
-    "`God was searching for you. You should leave to meet him.`",
-    "`You should Volunteer for target in an firing range.`",
-    "`Try playing catch and throw with RDX its fun.`",
-    "`People like you are the reason we have middle fingers.`",
-    "`When your mom dropped you off at the school, she got a ticket for littering.`",
-    "`You’re so ugly that when you cry, the tears roll down the back of your head…just to avoid your face.`",
-    "`If you’re talking behind my back then you’re in a perfect position to kiss my a**!.`",
+    "`Omonganmu sama seperti otakmu, kosong!`",
+    "`Kamu ini bicara apa? Terdengar seperti omong kosong.`",
+    "`Ada pistol didekatmu, ambillah dan tembak kepalamu sendiri.`",
+    "`Tetap putus asa dan jangan semangat.`",
+    "`Sebagai makhluk asing, bagaimana tanggapan kamu tentang peradaban manusia?`",
+    "`Kamu memang sangat luar biasa, dalam melakukan hal-hal bodoh.`",
+    "`Ya teruslah berusaha, suatu hari kamu pasti bisa kaya raya!.......(tapi boong)`",
+    "`Bersyukurlah, tidak semua orang bisa sebodoh dirimu.`",
+    "`Kamu ini seperti pisang, punya jantung tapi tak punya hati .`",
+    "`Kamu butuh tidur, selamanya.`",
+    "`Wowww katanya ada nama kamu dalam daftar penghuni abadi neraka.`",
+    "`Berbahagialah, sebentar lagi gebetanmu akan datang ke rumahmu, untuk mengundangmu datang ke pesta pernikahan dia bersama kekasihnya`",
+    "`Tarik nafas kemudian tahan sampai besok.`",
+    "`Go Green! Jangan hisap oksigen lagi.`",
+    "`Cobalah ketik cara menemukan otakmu di google, pasti sia-sia saja karena tidak ada hasil.`",
+    "`Kekuranganmu cuma satu, yaitu tidak punya kelebihan.`",
+    "`Cobalah menyebrang jalan tol sambil bernyanyi lagu favoritmu.`",
+    "`Coba berdiri di samping monyet itu, mirip kan kamu?`",
+    "`Artis idolamu mengajak bertemu, kamu akan dijadikan tumbal pesugihan.`",
+    "`Tidak ada manusia yang bisa bernafas melalu mulut ketika lidahnya dijulurkan keluar, kecuali kamu. Cobalah!`",
+    "`Aku benci melihat kamu menangis, wajahmu sangat buruk ketika menangis!.`",
 ]
 # ===========================================
                           
@@ -97,7 +97,7 @@ async def _(event):
     await event.edit(reply_text)
 
 
-@borg.on(admin_cmd(pattern="metoo ?(.*)"))
+@borg.on(admin_cmd(pattern="gombal ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
