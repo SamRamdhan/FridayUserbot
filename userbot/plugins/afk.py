@@ -85,7 +85,7 @@ async def on_afk(event):
     global USER_AFK  # pylint:disable=E0602
     global afk_time  # pylint:disable=E0602
     global last_afk_message  # pylint:disable=E0602
-    afk_since = "`Aduh lupa aing`"
+    afk_since = "`Tadi lah pokoknya.`"
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
         # userbot's should not reply to other userbot's
@@ -121,7 +121,7 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"**Boss saya lagi AFK** ! \n\n**Karena lagi** : `{reason}` \n\n**AFK Sejak** : {afk_since}" + \
+        message_to_reply = f"**Boss saya lagi AFK** ! \n\n**Karena sedang** : `{reason}` \n\n**AFK semenjak** : {afk_since}" + \
             f"\n\n__Sabar aja yah__ ! \n`Nanti juga dia aktif kok!`" \
             if reason \
             else f"**Hmm. Boss saya lagi AFK tapi ga ngasih tau mo ngapain! Bentar lagi kayaknya dia aktif!**"
