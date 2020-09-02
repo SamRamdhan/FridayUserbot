@@ -17,12 +17,12 @@ SLAP_TEMPLATES = [
     "{user1} {hits} {user2} dengan keras menggunakan {item}.",
     "{user1} {hits} {user2} menggunakan {item}.",
     "{user1} {throws} sebuah {item} ke wajah {user2}.",
-    "{user1} mengambil {item} kemudian {throws} ke {user2} menembus otaknya",
+    "{user1} mengambil {item} kemudian {throws} ke {user2} hingga terkapar.",
     "{user1} melempar {item} ke {user2} hingga sekarat.",
     "{user1} memfitnah {user2} telah mencuri {item}.",
     "{user1} berdiri dibelakang {user2} kemudian {hits} menggunakan {item}.",
     "{user1} meraih sebuah {item} lalu {hits} {user2} dengan keras.",
-    "{user1} membanting {user2} ke lantai kemudian {throws} sebuah {item} hingga ujung usia.",
+    "{user1} membanting {user2} ke lantai kemudian {throws} sebuah {item} dengan keras.",
     "{user1} mendorong dengan keras {user2} ke jurang penyesalan paling dalam."
 ]
 
