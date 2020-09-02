@@ -15,7 +15,7 @@ FONT_FILE_TO_USE = "Fonts/digital.ttf"
 async def _(event):
     if event.fwd_from:
         return
-    current_time = datetime.now().strftime("CANZU GABUT\nLOKASI : MAKASSAR \nWAKTU : %H:%M:%S \nTANGGAL: %d.%m.%y")
+    current_time = datetime.now().strftime("SAM RAMADHAN\nLOKASI : MAKASSAR \nWAKTU : %H:%M:%S \nTANGGAL: %d.%m.%y")
     start = datetime.now()
     input_str = event.pattern_match.group(1)
     reply_msg_id = event.message.id
@@ -28,7 +28,7 @@ async def _(event):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
     # pylint:disable=E0602
     required_file_name = Config.TMP_DOWNLOAD_DIRECTORY + " " + str(datetime.now()) + ".webp"
-    img = Image.new("RGBA", (350, 220), color=(0, 0, 0, 115))
+    img = Image.new("RGBA", (350, 220), color=(0, 0, 0, 255))
     fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)
     drawn_text = ImageDraw.Draw(img)
     drawn_text.text((10, 10), current_time, font=fnt, fill=(255, 255, 255))
@@ -43,7 +43,7 @@ async def _(event):
     os.remove(required_file_name)
     end = datetime.now()
     time_taken_ms = (end - start).seconds
-    await event.edit("Membuat stiker dalam {} seconds".format(time_taken_ms))
+    await event.edit("Membuat stiker dalam {} detik".format(time_taken_ms))
     await asyncio.sleep(5)
     await event.delete()
 
