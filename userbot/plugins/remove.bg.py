@@ -58,7 +58,7 @@ async def _(event):
             )
         end = datetime.now()
         ms = (end - start).seconds
-        await event.edit("Background telah dihapus dalam waktu {} detik, powered by canzu si gabut".format(ms))
+        await event.edit("Background telah dihapus dalam waktu {} detik, powered by  Sam Ramadhan".format(ms))
     else:
         await event.edit("ReMove.BG API returned Errors. Please report to @FridayOt Support Group\n`{}".format(output_file_name.content.decode("UTF-8")))
 
