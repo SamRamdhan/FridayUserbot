@@ -10,7 +10,7 @@ from userbot.utils import admin_cmd
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 if PMPERMIT_PIC is None:
-  WARN_PIC = "https://telegra.ph/file/91163f33da4878b71398f.jpg"
+  WARN_PIC = "https://telegra.ph/file/b93bed328df0c24f8afb5.jpg"
 else:
   WARN_PIC = PMPERMIT_PIC
 
@@ -19,18 +19,18 @@ PREV_REPLY_MESSAGE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**ANDA JANGAN MEMAKSA MENGIRIM PESAN** \n`ITU MELANGGAR DAN MERUPAKAN TINDAK KEJAHATAN`"
+CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**APA YANG ANDA LAKUKAN DISINI?** \n`ITU MELANGGAR DAN MERUPAKAN TINDAK KEJAHATAN`"
 USER_BOT_WARN_ZERO = "`Anda jangan spam pesan ke Boss saya, Atau saya akan memblok kontak anda.` "
-USER_BOT_NO_WARN = ("`Hai! Saya` **AGENT CANZU**\n"
-                    "`Petugas Keamanan Pesan Pribadi⚠️`\n\n"
+USER_BOT_NO_WARN = ("`Hai! Saya` **PRIVATE AGENT**\n"
+                    "`Bertugas menjaga keamanan PM⚠️`\n\n"
                     "**Untuk saat ini**\n"
                     f"{DEFAULTUSER} Sedang sibuk! Jangan spam pesan lagi disini!\n\n"
                     f"{CUSTOM_MIDDLE_PMP} \n\n"
-                    "**Silahkan anda ketik** /start **Sebagai izin pesan resmi!!**")
+                    "**Silahkan anda ketik** `/start` **Sebagai izin pesan resmi!!**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
-    @command(pattern="^.a ?(.*)")
+    @command(pattern="^.approve ?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
            return
@@ -66,7 +66,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
-    @command(pattern="^.da ?(.*)")
+    @command(pattern="^.dissapprove ?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -85,7 +85,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.fwd_from:
             return
         approved_users = pmpermit_sql.get_all_approved()
-        APPROVED_PMs = "Current Approved PMs\n"
+        APPROVED_PMs = "Yang dibolehkan untuk PM\n"
         if len(approved_users) > 0:
             for a_user in approved_users:
                 if a_user.reason:
