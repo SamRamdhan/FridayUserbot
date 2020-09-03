@@ -31,7 +31,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `PLUGIN_CHANNEL` " + \
                 "for the proper functioning of afk functionality " + \
-                "in @canzu\n\n `{}`".format(str(e)),
+                "in @SamRamadhan\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True
             )
@@ -61,7 +61,7 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
-            await event.edit(f"Boss saya sekarang AFK! Karena mau {reason}")
+            await event.edit(f"Boss saya sekarang AFK! Karena ingin {reason}")
         else:
             await event.edit(f"Boss saya sedang AFK")
         await asyncio.sleep(5)
@@ -69,7 +69,7 @@ async def _(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                f"#AfkLogger Hai bos selamat : {reason}"
+                f"#AfkLogger Boss AFK karena ingin : {reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
@@ -122,7 +122,7 @@ async def on_afk(event):
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = f"**Boss saya lagi AFK** ! \n\n**Karena sedang** : `{reason}` \n\n**AFK semenjak** : {afk_since}" + \
-            f"\n\n__Sabar aja yah__ ! \n`Nanti juga dia aktif kok!`" \
+            f"\n\n__Jangan spam__ ! \n`Sebentar lagi mungkin dia aktif.`" \
             if reason \
             else f"**Hmm. Boss saya lagi AFK tapi ga ngasih tau mo ngapain! Bentar lagi kayaknya dia aktif!**"
         msg = await event.reply(message_to_reply)
