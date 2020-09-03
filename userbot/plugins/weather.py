@@ -25,14 +25,14 @@ async def _(event):
         sun_set_time = int(response_api["sys"]["sunset"]) + country_time_zone
         await event.edit(
             """{}
-**Temperature**: {}°С
-    __minimium__: {}°С
-    __maximum__ : {}°С
-**Humidity**: {}%
-**wind**: {}m/s
-**clouds**: {}hpa
-**Sunrise**: {} {}
-**Sunset**: {} {}""".format(
+🌡**Temperature**: {}°С
+   🥶__Minimium__: {}°С
+   🥵__Maximum__ : {}°С
+☁**Kelembapan**: {}%
+🌬**Angin**: {}m/s
+💨**Awan**: {}hpa
+🌄**Terbit**: {} {}
+🌇**Terbenam**: {} {}""".format(
                 input_str,
                 response_api["main"]["temp"],
                 response_api["main"]["temp_min"],
