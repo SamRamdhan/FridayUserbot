@@ -7,33 +7,33 @@ METOOSTR = [
     "`Izinkan aku menyebut doamu didalam doaku kepada Tuhan untuk kuminta sebagai jodohku.`",
     "`Aku benci ketika harus berbohong bahwa aku tidak mencintaimu.`",
     "`Walaupun ditawari seluruh bidadari surga untuk menemaniku, aku menolak. Aku hanya ingin kamu.`",
-    "`Taukah pelangi yang sering kupandangi ketika hujan reda? Iya malu menampakkan diri lagi ketika kuceritakan bahwa cantikmu melebihi keindahannya.`",
+    "`Taukah pelangi yang sering kupandangi ketika hujan reda? Ia malu menampakkan diri lagi ketika kuceritakan bahwa cantikmu melebihi keindahannya.`",
     "`Ikan hiu sedang laper, i lop yu poreper. Wkwkwk`",
     "`Soekarno berkata : Berikan aku 10 pemuda maka akan kugoncangkan dunia. Kalau aku cuma butuh kamu menemaniku, maka akan kubuat 10 pemuda.`",
 ]
 RUNSREACTS = [
-    "`Runs to Thanos`",
-    "`Runs far, far away from earth`",
-    "`Running faster than usian bolt coz I'mma Bot`",
-    "`Runs to Marie`",
-    "`This Group is too cancerous to deal with.`",
-    "`Cya bois`",
-    "`I am a mad person. Plox Ban me.`",
-    "`I go away`",
-    "`I am just walking off, coz me is too fat.`",
-    "`I Fugged off!`",
+    "`Apa? Kamu ingin aku berpuisi? Bukankah kamulah seindah-indahnya puisi itu?`",
+    "`Sebenarnya aku tak pandai merangkai aksara, hanya saja ketika itu soal dirimu, apapun terasa begitu indah dan bermakna`",
+    "`Demikianlah realitanya. Temu tak pernah terjadi, namun perasaanku nyata mengagumi wujudmu`",
+    "`Jika kamu ibarat bunga, Aku akan menjadi pot sebagai wadah tempatmu tumbuh menjadi indah`",
+    "`Apa kamu sering merasa kesemutan? Mungkin itu karena kamu terlalu manis`",
+    "`Bolehkah aku memandangi wujud sempurna dirimu? Aku hanya ingin melihat betapa indahnya masa depanku`",
+    "`Ya, memang benar kalau didekatmu adalah candu. Sehari saja tak bersamamu, rasanya aku seperti ingin mati karena overdosis rindu.`",
+    "`Terseyumlah, rekah rona bibirmu begitu membuat hati semakin bergairah. Terseyumlah, hanya kamu, satu selain Tuhan yang mampu membuatku kagum. `",
+    "`Semoga aku bisa menulis seindah wujudmu. Aku memang pengagum puisi. Penyuka hal-hal indah. Berbait-bait kata indah sering ku baca. Namun, tahukah kamu kata yang paling indah menurutku? Namamu!`",
+    "`Jika mencintaimu adalah sesuatu yang melanggar hukum, Aku mungkin sudah jadi terpidana dengan hukuman paling lama`",
 ]
 RAPE_STRINGS = [
-     "`Rape Done Drink The Cum`",
-     "`The user has been successfully raped`",
-     "`Dekho Bhaiyya esa hai! Izzat bachailo apni warna Gaand maar lenge tumhari`",
-     "`Relax your Rear, ders nothing to fear,The Rape train is finally here`",
-     "`Rape coming... Raped! haha 😆`",
-     "`Lodu Andha hai kya Yaha tera rape ho raha hai aur tu abhi tak yahi gaand mara raha hai lulz`",
+     "`Hei, sibuk gak? Bantu aku cari sesuatu dong. Aku lagi nyari kekurangan kamu`",
+     "`Kamu atlit lari yah? Kok sering banget lari-lari dipikiranku.`",
+     "`Kamu punya keahlian lain gak sih selain membuat aku jatuh cinta? `",
+     "`Aku tadi mau beli bunga buat kamu, kata penjualnya gausah, takut bunganya layu gara-gara malu kalah cantik`",
+     "`AKU SAYANG KAMU! Pasti bacanya sambil ngegas yah? haha 😆`",
+     "`Ukuran kakimu berapa? Aku mau tau aja berapa ukuran surga anak-anakku`",
 ] 
 ABUSE_STRINGS = [
-       "`Madharchod`",
-	   "`Gaandu`",
+       "`Diam`",
+	   "`Yaudah`",
 	   "`Chutiya he rah jaye ga`",
 	   "`Ja be Gaandu`",
 	   "`Ma ka Bhodsa madharchod`",
@@ -42,12 +42,12 @@ ABUSE_STRINGS = [
 	   "`Muh Me Lega Bhosdike ?`"
 ]
 GEY_STRINGS = [
-     "`you gey bsdk`",
-     "`you gey`",
-     "`you gey in the house`",
-     "`you chakka`",
-     "`you gey gey gey gey gey gey gey gey`",
-     "`you gey go away`",
+     "`dihh gajelas`",
+     "`dih apaan sih`",
+     "`dih bacot`",
+     "`dih alay`",
+     "`dih dih dih dih dih`",
+     "`dih yaudah`",
 ]
 PRO_STRINGS = [
      "`Iya bang jago.`",
@@ -87,7 +87,7 @@ INSULT_STRINGS = [
 # ===========================================
                           
 
-@borg.on(admin_cmd(pattern="run ?(.*)"))
+@borg.on(admin_cmd(pattern="sajak ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
@@ -107,7 +107,7 @@ async def _(event):
     await event.edit(reply_text)
 
 
-@borg.on(admin_cmd(pattern="rapee ?(.*)"))
+@borg.on(admin_cmd(pattern="rayu ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
@@ -147,7 +147,7 @@ async def _(event):
     await event.edit(reply_text)
 			  
 			  
-@borg.on(admin_cmd(pattern="geyy ?(.*)"))
+@borg.on(admin_cmd(pattern="dih ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
