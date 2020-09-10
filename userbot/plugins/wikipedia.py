@@ -12,7 +12,7 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("Processing ...")
+    await event.edit("Sedang mencari...")
     input_str = event.pattern_match.group(1)
     result = ""
     results = wikipedia.search(input_str)
@@ -20,4 +20,4 @@ async def _(event):
         page = wikipedia.page(s)
         url = page.url
         result += f"> [{s}]({url}) \n"
-    await event.edit("WikiPedia **Search**: {} \n\n **Result**: \n\n{}".format(input_str, result))
+    await event.edit("WikiPedia **Cari**: {} \n\n **Hasil**: \n\n{}".format(input_str, result))
