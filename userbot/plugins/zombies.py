@@ -65,18 +65,18 @@ async def rm_deletedacc(show):
 
     con = show.pattern_match.group(1).lower()
     del_u = 0
-    del_status = "`No deleted accounts found, Group is clean`"
+    del_status = "`Tidak ada akun terhapus, Grup bersih`"
 
     if con != "clean":
-        await show.edit("`Searching for ghost/deleted/zombie accounts...`")
+        await show.edit("`Mencari akun yang sudah terhapus...`")
         async for user in show.client.iter_participants(show.chat_id):
 
             if user.deleted:
                 del_u += 1
                 await sleep(1)
         if del_u > 0:
-            del_status = f"`Found` **{del_u}** `ghost/deleted/zombie account(s) in this group,\
-            \nclean them by using .zombies clean`"
+            del_status = f"`Menemukan` **{del_u}** `akun terhapus di grup ini,\
+            \njika ingin membersihkan gunakan .zombies clean`"
         await show.edit(del_status)
         return
 
@@ -87,10 +87,10 @@ async def rm_deletedacc(show):
 
     # Well
     if not admin and not creator:
-        await show.edit("`I am not an admin here!`")
+        await show.edit("`Tidak bisa, karena bukan admin disini!`")
         return
 
-    await show.edit("`Deleting deleted accounts...\nOh I can do that?!?!`")
+    await show.edit("`Membersihkan akun terhapus...\nApakah bisa?!?!`")
     del_u = 0
     del_a = 0
 
@@ -100,7 +100,7 @@ async def rm_deletedacc(show):
                 await show.client(
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS))
             except ChatAdminRequiredError:
-                await show.edit("`I don't have ban rights in this group`")
+                await show.edit("`Saya tidak punya ijin untuk mem-ban digrup ini`")
                 return
             except UserAdminInvalidError:
                 del_u -= 1
@@ -111,11 +111,11 @@ async def rm_deletedacc(show):
 
 
     if del_u > 0:
-        del_status = f"Cleaned **{del_u}** deleted account(s)"
+        del_status = f"Membersihkan **{del_u}** akun terhapus"
 
     if del_a > 0:
-        del_status = f"Cleaned **{del_u}** deleted account(s) \
-        \n**{del_a}** deleted admin accounts are not removed"
+        del_status = f"Membersihkan **{del_u}** akun terhapus \
+        \n**{del_a}** akun terhapus admin belum dibersihkan"
 
 
     await show.edit(del_status)
