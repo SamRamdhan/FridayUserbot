@@ -28,7 +28,7 @@ async def _(event):
             return
         if event.is_private:
          
-         PM = ("`Hai. Anda mengakses menu untuk memilih tindakan kepada Boss saya,`"
+         PM = ("`Hai. Anda mengakses menu untuk memilih tujuan dan tindakan yang ingin diajukan kepada Boss saya,`"
                f"{DEFAULTUSER}.\n"
                "__Ayo lakukan ini dengan mudah dan bijak! Silahkan pilih angka berisi alasan__\n"
                "**Ketik salah satu angka tindakan apa yang akan anda lakukan:**\n\n"
@@ -38,10 +38,10 @@ async def _(event):
                "`3`. Untuk bertanya sesuatu.\n"
                "`4`. Untuk meminta sesuatu.\n")
          ONE = ("`Oke permintaanmu diterima! Boss saya akan segera kembali untuk membalas chat anda!` \n\n")
-         TWO = ("`Jangan lakukan hal itu! Atau kontak anda akan block!`")
+         TWO = ("`Jangan lakukan hal itu! Atau kontak anda akan saya block!`")
          FOUR = ("`Baiklah! Saya paham apa yang anda inginkan! Tunggulah sampai Boss saya memberi anda akses!`")
          FIVE = ("`Okelah. Harap anda menjaga sopan santun kepada Boss saya. Jika dia ingin membantu, dia pasti akan merespon anda.`\n**Jangan lakukan hal yang mengganggu jika anda tidak ingin dilaporkan dan diblok.**")
-         LWARN = ("**Ini perintah terakhir. Jangan asal kirim pesan atau anda akan saya laporkan dan blok. Harap mengerti. Boss saya pasti akan merespon anda nanti.**\n__Use__ /start __untuk kembali ke menu pilihan.__")
+         LWARN = ("**Ini perintah terakhir. Jangan asal kirim pesan atau anda akan saya laporkan dan blok. Harap mengerti. Boss saya pasti akan merespon anda nanti.**\n__Gunakan__ /start __untuk kembali ke menu pilihan.__")
      
         async with borg.conversation(chat) as conv:
          await borg.send_message(chat, PM)
