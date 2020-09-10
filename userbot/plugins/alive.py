@@ -18,7 +18,7 @@ pm_caption += f"**USERNAME** : {DEFAULTUSER} \n"
 pm_caption += "**GROUP SAYA** : @KerabatOnline\n\n"
 pm_caption += "• [Kerabat Online Twitter](https://twitter.com/KerabatOnline)\n"
 pm_caption += "• [Kerabat Online Channel](https://t.me/KerabatOnline_Ch)\n"
-pm_caption += "• [Kerabat Moments](https://t.me/KerabatMoments)"
+pm_caption += "• [Kerabat Moment](https://t.me/KerabatMoment)"
 
 @borg.on(admin_cmd(pattern=r"alive"))
 async def friday(alive):
