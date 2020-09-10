@@ -54,12 +54,12 @@ async def _(event):
     userid = event.from_id
     #packname = f"FRIDAY PACK"
     #packshortname = f"FRIDAY_{userid}_ns"  # format: Uni_Borg_userid
-    if userid == 1263617196:
-        packname = f"@StarkGang Packs 🎭"
-        packshortname = "StarkGangPack"
+    if userid == 891467722:
+        packname = f"@SamRamadhan Pack🎭"
+        packshortname = "SamRamadhanKangPack"
     else:
-        packname = f"{user.username}'s {pack}"
-        packshortname = f"FRIDAY_{userid}_Pack"
+        packname = f"@{user.username}'s {pack}"
+        packshortname = f"Sam_{userid}_Pack"
     await event.edit("`Yeah ! Saya suka ini ! Bolehkah saya menyimpannya ?`")
 
     is_a_s = is_it_animated_sticker(reply_message)
@@ -70,11 +70,11 @@ async def _(event):
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
         if userid == 813878981:
-            packname = f"StarkGang Ka Pack"
-            packshortname = "StarkGangisgreat"
+            packname = f"SamRamadhan Animasi Pack"
+            packshortname = "SamRamadhanAnimasiPack"
         else:
-            packname = f"{user.username}'s {pack}"
-            packshortname = f"FRIDAY_{userid}" # format: Uni_Borg_userid
+            packname = f"@{user.username}'s {pack}"
+            packshortname = f"Sam_{userid}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -84,7 +84,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("Memasukkan ke pack! Bentar yah!")
+    await event.edit("Memasukkan ke pack! Tunggu sebentar!")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -134,7 +134,7 @@ async def _(event):
                 while response.text == FILLED_UP_DADDY:
                     pack += 1
                     prevv = int(pack) - 1
-                    packname = f"{user.username}'s {pack}"
+                    packname = f"@{user.username}'s {pack}"
                     packshortname = f"Vol_{pack}_with_{user.username}"
                     #if userid == 948408212:
                        # packname = f"{user.username}'s {pack}"
@@ -194,7 +194,7 @@ async def _(event):
                 await silently_send_message(bot_conv, response)
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
-    await event.edit(f"**Stiker sukses ditambahkan ke pack** [disini](t.me/addstickers/{packshortname})")
+    await event.edit(f"**Stiker sukses ditambahkan ke pack anda Boss** [disini](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
