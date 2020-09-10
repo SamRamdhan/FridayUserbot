@@ -27,19 +27,19 @@ from userbot.utils import register,admin_cmd
 # ================= CONSTANT =================
 RENDISTR = [
     "`Ada berbagai macam keindahan yang tercipta di muka bumi ini, salah satunya adalah wujud sempurnamu`",
-    "`Jag Suna suna laage Sab #maderchod bhay`",
-    "`you talking behind meh wew uh iz my fan now bhay`",
-    "`Wanna pass in Life Goto BRAZZER.CAM BHAY`",
-    "`Uh iz Pro i iz noob your boob is landi uh are Randi`",
-    "`Sellers Nasa calling Uh bhay😆`",
-    "`Badwoo ki yojna behan bna ke ch*da uh iz badwa its your yozja?`",
-    "`CHAND PE CHADA HAI CHANDYAAN KA GHODA TERA NAAM HAI MANSUR TU HAI BEHAN KA LOD*😂`",
-    "`Jab se dil lga baithe tanhai me maa chu*da baithe wo kho gyi kisi aur ke pyar hum apne hi jaato me aag lga baithe`",
-    "`Chadii ke ander se lal pani kha se ata hai ky teri masuka ka bhosda bhi paan khata hai😂`",
-    "`Sun bhosdi ke By anonyCrew MOHABBAT KE SIWA AUR BHI GAM HAI JAMANE ME BSDK GAND PAHAT JATI HAI PAISA KAMANE ME`",
-    "`Thaan liya tha Sayri nhi krege Unka pichwada dekha Alfaaz nikal gye`",
-    "`Ravivaar ko dekha Chand Ka Tukra Itna Baar Dekha par Jaath na Ukra`",
-    "`Katal kro Tir se Talwar me Ky Rkkha hai Maal Chodo Sari Me Salwar me Ky Rkkha hai`",
+    "`Detik berubah menit. Menit bertukar jam. Hari berganti minggu. Bahkan bulan digeser tahun. Walau lintasan waktu kian usang, namun padamu aku tetap sayang.`",
+    "`Meskipun itu akan membuat hidupku berakhir, jika untuk membuatmu bahagia pasti akan kulakukan. Karena pada bahagiamu, surgaku telah kutetapkan.`",
+    "`Tak perlu takut soal fotomu yang selalu kupandangi, tak akan aku melakukan sesuatu yang akan melukaimu. Mana mungkin aku tega menyakiti seseorang yang sangat kucintai.`",
+    "`Kamu percaya soal ramalan? Jika tidak, semoga kau percaya akan mimpi yang diharapkan terjadi. Seperti keinginanku untuk menghabiskan seluruh waktu bersama seseorang yang ada pada kata pertama dari pesan ini.`",
+    "`Bahkan ketika nyeyak menghampiri tidurku, aku masih berharap dirimu menungguku diruang mimpi.`",
+    "`Jika pada akhirnya bukan diriku tempatmu menghabiskan sisa waktu, maka mohon jangan suruh aku untuk melupakanmu.`",
+    "`Biarlah jika kata mereka memiliki dirimu adalah sesuatu yang fana, daripada harus melupakanmu yang jelas akan membuatku merana.`",
+    "`Jika boleh berandai-andai, aku berkhayal sekiranya aku tak usah berlebihan mengagumi wujudmu. Karena pada kenyataannya, aku tidak bisa melakukan itu.`",
+    "`Maaf jika setiap pesanku bergelimang rayuan, membuat seakan-akan semuanya terlalu berlebihan. Aku anggap itu belum ada apa-apanya dibanding kebahagian yang kudapat atas kagumku pada parasmu.`",
+    "`Padamu, perempuan tempat bahagiaku mengabdi seluruh. Dengan segala keterbatasan waktu yang diserahkan oleh Sang Maha, semoga aku mampu tak membuat hidupmu keruh.`",
+    "`Semoga semua pesan yang selalu kukirim padamu tak membuatmu mejauhiku. Aku hanya takut jika kau pergi, bahagiaku juga pergi.`",
+    "`Pada senyumanmu yang begitu indah, percayalah disitu tempat semua rinduku selalu terarah.`",
+    "`Jika boleh aku mengampun padamu. Tolong maafkan pengharapanku yang begitu tega menaruh seluruh bahagiaku padamu.`",
 ]
 NOOBSTR = [
     "`YOU PRO NIMBA DONT MESS WIDH MEH`",
@@ -212,7 +212,7 @@ INSULT_STRINGS = [
     "`Keep talking, someday you'll say something intelligent!.......(I doubt it though)`",
     "`Everyone has the right to be stupid but you are abusing the privilege.`",
     "`I'm sorry I hurt your feelings when I called you stupid. I thought you already knew that.`",
-    "`You should try tasting cyanide.`",
+    "`You should try tasting .`",
     "`You should try sleeping forever.`",
     "`Sharam kar bsdwale,kitni bkchodi deta.`",
     "`Chup Madarhox, bilkul chup..`",
@@ -1052,7 +1052,7 @@ async def metoo(hahayes):
     if not hahayes.text[0].isalpha() and hahayes.text[0] not in ("/", "#", "@", "!"):
         await hahayes.edit(random.choice(NOOBSTR))
 			  
-@register(outgoing=True, pattern="^.rendi$")
+@register(outgoing=True, pattern="^.aksara$")
 async def metoo(hahayes):
     """ Haha yes """
     if not hahayes.text[0].isalpha() and hahayes.text[0] not in ("/", "#", "@", "!"):
