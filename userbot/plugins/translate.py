@@ -19,7 +19,7 @@ async def _(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         text = previous_message.message
-        lan = input_str or "gu"
+        lan = input_str or "id"
     elif "|" in input_str:
         lan, text = input_str.split("|")
     else:
@@ -34,8 +34,8 @@ async def _(event):
         # TODO: emojify the :
         # either here, or before translation
         output_str = """**Diterjemahkan oleh Saya** 
-         Dari **( {} )**
-         Ke **( {} )**
+         Dari Bahasa **( {} )**
+         Ke Bahasa **( {} )**
          {}""".format(
             translated.src,
             lan,
