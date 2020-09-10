@@ -253,9 +253,9 @@ async def ban(bon):
     # is done gracefully
     # Shout out the ID, so that fedadmins can fban later
     if reason:
-        await bon.edit(f"Loser `{str(user.id)}` was banned !!\nReason: {reason}")
+        await bon.edit(f"Orang ini `{str(user.id)}` sudah terbanned!!\nAlasan: {reason}")
     else:
-        await bon.edit(f"This Noob `{str(user.id)}` was banned !!")
+        await bon.edit(f"Orang ini `{str(user.id)}` Telah dibanned!!")
     # Announce to the logging group if we have banned the person
     # successfully!
     if BOTLOG:
