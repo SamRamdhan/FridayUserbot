@@ -49,7 +49,7 @@ async def _(event):
             "`Mentransfer\n\n\nTunggu sebentar\nJangan pergi\n\nSedang proses...\n\nPersentase... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Mentransfer\n\n\nTunggu sebentar\nJangan pergi\n\nSebentar lagi...\n\nPersentase... 84%\n█████████████████████▒▒▒▒ `",
             "`Mentransfer\n\n\nSedang memuat\nTunggu sebentar\n\nSelesai...\n\nPersentase... 100%\n█████████████████████████ `",
-            "`Proses transfer sukses dilakukan\n\n\nSekarang semua kasih sayangku telah menjadi milikmu semuanya\nSemoga cukup untuk bisa membuat menjadi milikku\n\nDan semoga mampu membuatmu bahagia\n\nI Love You` 🤗"
+            "`Proses transfer sukses dilakukan\n\n\nSekarang semua kasih sayangku telah menjadi milikmu semuanya\nSemoga cukup untuk bisa membuatmu menjadi milikku\n\nDan semoga mampu membuatmu bahagia\n\nI Love You` 🤗"
         ]
 
         for i in animation_ttl:
