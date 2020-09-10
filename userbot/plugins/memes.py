@@ -26,7 +26,7 @@ from userbot.utils import register,admin_cmd
 
 # ================= CONSTANT =================
 RENDISTR = [
-    "`I Know Uh ez Rendi Bhay Dont show Your Randi Pesa Here`",
+    "`Ada berbagai macam keindahan yang tercipta di muka bumi ini, salah satunya adalah wujud sempurnamu`",
     "`Jag Suna suna laage Sab #maderchod bhay`",
     "`you talking behind meh wew uh iz my fan now bhay`",
     "`Wanna pass in Life Goto BRAZZER.CAM BHAY`",
@@ -590,65 +590,65 @@ CRI = [
 ]
 
 SLAP_TEMPLATES = [
-    "{hits} {victim} with a {item}.",
-    "{hits} {victim} in the face with a {item}.",
-    "{hits} {victim} around a bit with a {item}.",
-    "{throws} a {item} at {victim}.",
-    "grabs a {item} and {throws} it at {victim}'s face.",
-    "launches a {item} in {victim}'s general direction.",
-    "starts slapping {victim} silly with a {item}.",
-    "pins {victim} down and repeatedly {hits} them with a {item}.",
-    "grabs up a {item} and {hits} {victim} with it.",
-    "ties {victim} to a chair and {throws} a {item} at them.",
-    "gave a friendly push to help {victim} learn to swim in lava."
+    "@SamRamadhan {hits} {victim} dengan mesra di {item}.",
+    "@SamRamadhan {hits} {victim} saat berada di {item}.",
+    "@SamRamadhan {hits} {victim} di {item}.",
+    "@SamRamadhan diajak {victim} ke {item} kemudian mereka {throws}.",
+    "@SamRamadhan pergi ke {item} kemudian {throws} dengan {victim} sampai puas.",
+    "@SamRamadhan berada di {item} dan sedang bermesraan dengan {victim}.",
+    "@SamRamadhan diajak {victim} untuk bermesraan di {item}.",
+    "@SamRamadhan {hits} dengan mesra {victim} di {item}.",
+    "@SamRamadhan diajak untuk pergi ke {item} dan {throws} dengan {victim} sampai puas.",
+    "@SamRamadhan bersama {victim} sedang {throws} di {item}.",
+    "@SamRamadhan dipaksa oleh {victim} untuk {throws}."
 ]
 
 ITEMS = [
-    "cast iron skillet",
-    "large trout",
-    "baseball bat",
-    "cricket bat",
-    "wooden cane",
-    "nail",
-    "printer",
-    "shovel",
-    "CRT monitor",
-    "physics textbook",
-    "toaster",
-    "portrait of Richard Stallman",
-    "television",
-    "five ton truck",
-    "roll of duct tape",
-    "book",
-    "laptop",
-    "old television",
-    "sack of rocks",
-    "rainbow trout",
-    "rubber chicken",
-    "spiked bat",
-    "fire extinguisher",
-    "heavy rock",
-    "chunk of dirt",
-    "beehive",
-    "piece of rotten meat",
-    "bear",
-    "ton of bricks",
+    "Hotel mewah",
+    "taman bermain",
+    "rumahnya",
+    "pinggir kolam renang",
+    "dalam kamarnya",
+    "dalam mobil",
+    "sebuah gedung kosong",
+    "kos kosan",
+    "restoran",
+    "fly over",
+    "pelaminan",
+    "rumahnya",
+    "kamarnya",
+    "ruang tamu",
+    "taman",
+    "atas kasur",
+    "samping ibunya",
+    "teras rumahnya",
+    "parkiran mall",
+    "bioskop",
+    "dalam kos kosan",
+    "bar",
+    "taman",
+    "Hotel",
+    "kebun teh",
+    "pasar malam",
+    "dalam mobil",
+    "rumah",
+    "kantornya",
 ]
 
 THROW = [
-    "throws",
-    "flings",
-    "chucks",
-    "hurls",
+    "berciuman",
+    "berpelukan",
+    "mantap-mantap",
+    "bercumbu",
 ]
 
 HIT = [
-    "hits",
-    "whacks",
-    "fek ke maari",
-    "slaps",
-    "smacks",
-    "bashes",
+    "mencium",
+    "memeluk",
+    "memeluk",
+    "menggoda",
+    "merayu",
+    "mencium",
 ]
 
 # ===========================================
@@ -682,7 +682,7 @@ async def kek(keks):
             await keks.edit(":" + uio[i % 2])
 
 
-@register(pattern="^.slap(?: |$)(.*)", outgoing=True)
+@register(pattern="^.mesum(?: |$)(.*)", outgoing=True)
 async def who(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         """ slaps a user, or get slapped if not a reply. """
