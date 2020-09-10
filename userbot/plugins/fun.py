@@ -4,7 +4,7 @@ from uniborg.util import admin_cmd
 
 METOOSTR = [
     "`Cobalah berkaca, maka kamu akan tau arti segalanya bagiku.`",
-    "`Izinkan aku menyebut doamu didalam doaku kepada Tuhan untuk kuminta sebagai jodohku.`",
+    "`Izinkan aku menyebut namamu didalam doaku kepada Tuhan untuk kuminta sebagai jodohku.`",
     "`Aku benci ketika harus berbohong bahwa aku tidak mencintaimu.`",
     "`Walaupun ditawari seluruh bidadari surga untuk menemaniku, aku menolak. Aku hanya ingin kamu.`",
     "`Taukah pelangi yang sering kupandangi ketika hujan reda? Ia malu menampakkan diri lagi ketika kuceritakan bahwa cantikmu melebihi keindahannya.`",
@@ -19,7 +19,7 @@ RUNSREACTS = [
     "`Apa kamu sering merasa kesemutan? Mungkin itu karena kamu terlalu manis`",
     "`Bolehkah aku memandangi wujud sempurna dirimu? Aku hanya ingin melihat betapa indahnya masa depanku`",
     "`Ya, memang benar kalau didekatmu adalah candu. Sehari saja tak bersamamu, rasanya aku seperti ingin mati karena overdosis rindu.`",
-    "`Terseyumlah, rekah rona bibirmu begitu membuat hati semakin bergairah. Terseyumlah, hanya kamu, satu selain Tuhan yang mampu membuatku kagum. `",
+    "`Terseyumlah, rekah rona bibirmu begitu membuat hati semakin bergairah. Tersenyumlah, hanya kamu, satu selain Tuhan yang mampu membuatku kagum. `",
     "`Semoga aku bisa menulis seindah wujudmu. Aku memang pengagum puisi. Penyuka hal-hal indah. Berbait-bait kata indah sering ku baca. Namun, tahukah kamu kata yang paling indah menurutku? Namamu!`",
     "`Jika mencintaimu adalah sesuatu yang melanggar hukum, Aku mungkin sudah jadi terpidana dengan hukuman paling lama`",
 ]
