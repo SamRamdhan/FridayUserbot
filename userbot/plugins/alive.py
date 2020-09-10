@@ -15,10 +15,10 @@ pm_caption += "**DOMISILI** : `MAKASSAR, INDONESIA`\n"
 pm_caption += "**UMUR** : `GAADA YANG TAU`\n"
 pm_caption += "**HOBBY** : `IBADAH`\n"
 pm_caption += f"**USERNAME** : {DEFAULTUSER} \n"
-pm_caption += "**GROUP SAYA** : `Kerabat Online`\n\n"
-pm_caption += "• [Twitter Grup](https://twitter.com/KerabatOnline)\n"
-pm_caption += "• [Channel Telegram](https://t.me/KerabatOnline_Ch)\n"
-pm_caption += "• [Group Telegram](https://t.me/KerabatOnline)"
+pm_caption += "**GROUP SAYA** : @KerabatOnline\n\n"
+pm_caption += "• [Kerabat Online Twitter](https://twitter.com/KerabatOnline)\n"
+pm_caption += "• [Kerabat Online Channel](https://t.me/KerabatOnline_Ch)\n"
+pm_caption += "• [Kerabat Moments](https://t.me/KerabatMoments)"
 
 @borg.on(admin_cmd(pattern=r"alive"))
 async def friday(alive):
