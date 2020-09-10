@@ -29,27 +29,27 @@ async def _(event):
 
     animation_interval = 5
 
-    animation_ttl = range(0, 11)
+    animation_ttl = range(0, 10)
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "chod":
+    if input_str == "fakboi":
 
         await event.edit(input_str)
 
         animation_chars = [
         
-            "`Randi Founded`",
-            "`Your Mom Is Going To Fuck`",
-            "`Fucking Your Mom\n\n\nYour Mom's Pussy Get Red\nCumming On Pussy\n\nAlmost Done... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking Your Mom\n\n\nYour Mom's Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking Your Mom\n\n\nYour Mom's Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
-            "`Fucking Your Mom\n\n\nYour Mom's Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking Your Mom\n\n\nYour Mom's Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking Your Mom\n\n\nYour Mom's Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Fucking Your Mom\n\n\nYour Mom's Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 84%\n█████████████████████▒▒▒▒ `",
-            "`Fucking Your Mom\n\n\nYour Mom's Pussy Get Red\nCumming On Pussy\n\nAlmost Done...\n\nFucked Percentage... 100%\n█████████████████████████ `",
-            "`Fucking Your Mom\n\n\nYour Mom's Pussy Get Red\nCumming On Pussy\n\nYour mom get Pregnant\n\nResult: Now You Have 1 More Younger Brother `"
+            "`Hai kamu`",
+            "`Akan kuberikan semua sisa kasih sayang yang aku punya`",
+            "`Proses mentransfer\n\n\n\nTunggu sebentar\n\nMemulai... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mentransfer\n\n\nTunggu sebentar\nJangan pergi\n\nSedang proses...\n\nPersentase... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mentransfer\n\n\nTunggu sebentar\nJangan pergi\n\nSedang proses...\n\nPersentase... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
+            "`Mentransfer\n\n\nTunggu sebentar\nJangan pergi\n\nSedang proses...\n\nPersentase... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mentransfer\n\n\nTunggu sebentar\nJangan pergi\n\nSedang proses...\n\nPersentase... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mentransfer\n\n\nTunggu sebentar\nJangan pergi\n\nSedang proses...\n\nPersentase... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mentransfer\n\n\nTunggu sebentar\nJangan pergi\n\nSebentar lagi...\n\nPersentase... 84%\n█████████████████████▒▒▒▒ `",
+            "`Mentransfer\n\n\nSedang memuat\nTunggu sebentar\n\nSelesai...\n\nPersentase... 100%\n█████████████████████████ `",
+            "`Proses transfer sukses dilakukan\n\n\nSekarang semua kasih sayangku telah menjadi milikmu semuanya\nSemoga cukup untuk bisa membuat menjadi milikku\n\nDan semoga mampu membuatmu bahagia\n\nI Love You` 🤗"
         ]
 
         for i in animation_ttl:
