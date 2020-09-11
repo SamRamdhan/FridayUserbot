@@ -16,7 +16,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd("fuck"))
+@borg.on(admin_cmd("coli"))
 
 async def _(event):
 
@@ -32,17 +32,17 @@ async def _(event):
 
    # if input_str == "fuk":
 
-    await event.edit("fuk")
+    await event.edit("Pasukan Colkiss")
 
     animation_chars = [
 
-            "👉       ✊️",
+            "8===D✊️",
 
-            "👉     ✊️",
+            "8=✊️=D",
 
-            "👉  ✊️",
+            "8✊️==D",
 
-            "👉✊️💦"
+            "8✊️==D💧💦"
 
         ]
 
