@@ -15,7 +15,7 @@ FONT_FILE_TO_USE = "Fonts/digital.ttf"
 async def _(event):
     if event.fwd_from:
         return
-    current_time = datetime.now().strftime("SAM RAMADHAN USERBOT\n\nLOKASI : MAKASSAR, INDONESIA\n   WAKTU : %H:%M:%S \n   TANGGAL: %d.%m.%y \n\n➡➡➡➡➡➡")
+    current_time = datetime.now().strftime("INFORMASI ZONA WAKTU\n\nLOKASI : MAKASSAR, INDONESIA\n   WAKTU : %H:%M:%S \n   TANGGAL: %d.%m.%y \n\nSAM RAMADHAN")
     start = datetime.now()
     input_str = event.pattern_match.group(1)
     reply_msg_id = event.message.id
@@ -28,7 +28,7 @@ async def _(event):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
     # pylint:disable=E0602
     required_file_name = Config.TMP_DOWNLOAD_DIRECTORY + " " + str(datetime.now()) + ".webp"
-    img = Image.new("RGBA", (350, 220), color=(0, 0, 0, 200))
+    img = Image.new("RGBA", (350, 220), color=(0, 0, 0, 255))
     fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)
     drawn_text = ImageDraw.Draw(img)
     drawn_text.text((12, 12), current_time, font=fnt, fill=(255, 0, 0))
