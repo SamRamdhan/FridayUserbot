@@ -33,10 +33,10 @@ async def _(event):
         after_tr_text = translated.text
         # TODO: emojify the :
         # either here, or before translation
-        output_str = """**Diterjemahkan oleh Saya** 
+        output_str = """**SamRamadhan Kamus** 
          Dari Bahasa **( {} )**
          Ke Bahasa **( {} )**
-         {}""".format(
+     {}""".format(
             translated.src,
             lan,
             after_tr_text
