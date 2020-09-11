@@ -34,12 +34,12 @@ RAPE_STRINGS = [
 ABUSE_STRINGS = [
        "`Diam`",
 	   "`Yaudah`",
-	   "`Chutiya he rah jaye ga`",
-	   "`Ja be Gaandu`",
-	   "`Ma ka Bhodsa madharchod`",
-	   "`mml`",
-	   "`You MotherFukcer`",
-	   "`Muh Me Lega Bhosdike ?`"
+	   "`Ingin berkata kasar`",
+	   "`Hilih Bicit`",
+	   "`Suka-suka anda sajalah`",
+	   "`Bodoamat dah`",
+	   "`Brisik ah jamet`",
+	   "`Apakah saya harus peduli ?`"
 ]
 GEY_STRINGS = [
      "`dihh gajelas`",
@@ -117,7 +117,7 @@ async def _(event):
     await event.edit(reply_text)
 			  
                           
-@borg.on(admin_cmd(pattern="insultt ?(.*)"))
+@borg.on(admin_cmd(pattern="hina ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
@@ -137,7 +137,7 @@ async def _(event):
     await event.edit(reply_text)
 			  
 			  
-@borg.on(admin_cmd(pattern="abusee ?(.*)"))
+@borg.on(admin_cmd(pattern="bacot ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
