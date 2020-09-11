@@ -21,23 +21,23 @@ async def _(event):
     await event.edit("ok")
     animation_chars = [
             "OK",
-            "BOSS",
-            "OK MAN",
-            "OK BITCH",
-            "OK FUKCER",
-            "OK SEXY BABE",
-            "OK GAY",
-            "OK SIR",
-            "GO AND SAY OK",
-            "OK LOL",
-            "YAA OK",
-            "FCUK",
+            "BAIKLAH",
+            "OK BRO",
+            "OK SIS",
+            "OK BANG",
+            "OK BOSS",
+            "OK GAES",
+            "OK FANS",
+            "IYA OK",
+            "HMMMMMM",
+            "OKEEEEEEEEEE",
+            "MANTAP",
             "OK",
             "Boss",
             "Yeahhhhhh",
             "O",
             "K",
-            "Ok Boss! 😇"
+            "Ok Boss! 😎"
         ]
 
     for i in animation_ttl:
