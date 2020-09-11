@@ -36,7 +36,7 @@ async def _(event):
         output_str = """**SamRamadhan Kamus** 
          Dari Bahasa **( {} )**
          Ke Bahasa **( {} )**
-     {}""".format(
+`{}`""".format(
             translated.src,
             lan,
             after_tr_text
