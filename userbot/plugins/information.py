@@ -34,7 +34,7 @@ async def _(event):
         first_name = first_name.replace("\u2060", "")
     last_name = replied_user.user.last_name
     last_name = last_name.replace(
-        "\u2060", "") if last_name else ("Last Name not found")
+        "\u2060", "") if last_name else ("Tidak ada nama belakang")
     user_bio = replied_user.about
     if user_bio is not None:
         user_bio = html.escape(replied_user.about)
@@ -42,20 +42,20 @@ async def _(event):
     try:
         dc_id, location = get_input_location(replied_user.profile_photo)
     except Exception as e:
-        dc_id = "`Need a Profile Picture to check **this**`"
+        dc_id = "`Butuh foto profil untuk mengecek` **ini**"
         location = str(e)
-    caption = """<b>Extracted Userdata From Telegram DATABASE By Sam Ramadhan<b>
-<b>🔥Telegram ID</b>: <code>{}</code>
-<b>🤟Permanent Link</b>: <a href='tg://user?id={}'>Click Here</a>
-<b>🗣️First Name</b>: <code>{}</code>
-<b>🗣️Second Name</b>: <code>{}</code>
-<b>👨🏿‍💻BIO</b>: {}
+    caption = """<b>Menampilkan Data Telegram Pengguna<b>
+<b>🆔ID</b>: <code>{}</code>
+<b>🔗Link Akun</b>: <a href='tg://user?id={}'>Klik disini</a>
+<b>🗣️Nama Depan</b>: <code>{}</code>
+<b>🗣️Nama Belakang</b>: <code>{}</code>
+<b>📱BIO</b>: {}
 <b>🎃DC ID</b>: {}
 <b>⚡NO OF PSS</b> : {}
-<b>🤔IS RESTRICTED</b>: {}
-<b>✅VERIFIED</b>: {}
-<b>🙄IS A BOT</b>: {}
-<b>👥Groups in Common</b>: {}
+<b>🤔Dibatasi?</b>: {}
+<b>✅Terverifikasi?</b>: {}
+<b>🙄Bot?</b>: {}
+<b>👥Grup Bersama</b>: {}
 """.format(
         user_id,
         user_id,
