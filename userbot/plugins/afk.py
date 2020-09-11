@@ -24,7 +24,7 @@ async def set_not_afk(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                "#AfkLogger Hai bos welkam bek"
+                "#AfkLogger Hai boss anda sudah tidak AFK"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
@@ -69,7 +69,7 @@ async def _(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                f"#AfkLogger Boss AFK karena ingin : {reason}"
+                f"#AfkLogger Sekarang anda AFK Boss, alasannya: {reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
@@ -85,7 +85,7 @@ async def on_afk(event):
     global USER_AFK  # pylint:disable=E0602
     global afk_time  # pylint:disable=E0602
     global last_afk_message  # pylint:disable=E0602
-    afk_since = "`Tadi lah pokoknya.`"
+    afk_since = "`Saya juga tidak tahu`"
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
         # userbot's should not reply to other userbot's
@@ -121,10 +121,10 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"**Boss saya lagi AFK** ! \n\n**Karena sedang** : `{reason}` \n\n**AFK semenjak** : {afk_since}" + \
-            f"\n\n__Jangan spam__ ! \n`Sebentar lagi mungkin dia aktif.`" \
+        message_to_reply = f"**Untuk saat ini Boss saya sedang AFK** ❌❌\n\n**Karena lagi** `{reason}` \n\n**Kapan dia aktif?** : {afk_since} 🤔🤔" + \
+            f"\n\n__Jika ada perlu, saya harap anda bisa bersabar menunggu sampai Boss saya aktif.__ \n`TERIMA KASIH.` 😎😎" \
             if reason \
-            else f"**Hmm. Boss saya lagi AFK tapi ga ngasih tau mo ngapain! Bentar lagi kayaknya dia aktif!**"
+            else f"**Saat ini Boss saya sedang AFK! Mungkin saja dia sibuk!** "
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
