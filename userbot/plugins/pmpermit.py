@@ -19,12 +19,12 @@ PREV_REPLY_MESSAGE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**APA YANG ANDA LAKUKAN DISINI?** \n`ITU MELANGGAR DAN MERUPAKAN TINDAK KEJAHATAN`"
-USER_BOT_WARN_ZERO = "`Anda jangan spam pesan ke Boss saya, Atau saya akan memblok kontak anda.` "
+CUSTOM_MIDDLE_PMP = str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "**Ada yang bisa saya bantu?** \n`Silahkan tinggalkan pesan tapi jangan spam.`"
+USER_BOT_WARN_ZERO = "`Jika anda spam pesan ke Boss saya, maka saya akan memblok kontak anda.` "
 USER_BOT_NO_WARN = ("`Hai! Saya` **PRIVATE AGENT**\n"
                     "`Bertugas menjaga keamanan PM⚠️`\n\n"
                     "**Untuk saat ini**\n"
-                    f"{DEFAULTUSER} Sedang sibuk! Jangan spam pesan lagi disini!\n\n"
+                    f"{DEFAULTUSER} belum memberi anda izin PM! Mohon agar menunggu sampai Boss saya merespon!\n\n"
                     f"{CUSTOM_MIDDLE_PMP} \n\n"
                     "**Silahkan anda ketik** `/start` **Sebagai izin pesan resmi!!**")
 
@@ -66,7 +66,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
-    @command(pattern="^.dissapprove ?(.*)")
+    @command(pattern="^.disapprove ?(.*)")
     async def approve_p_m(event):
         if event.fwd_from:
             return
