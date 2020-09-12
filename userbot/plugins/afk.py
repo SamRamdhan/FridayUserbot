@@ -53,7 +53,7 @@ async def _(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                f"Sam Ramadhan sekarang AFK, alasannya {reason}"
+                f"#Laporan_AFK Saat ini Boss saya sedang AFK, alasannya {reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
@@ -76,7 +76,7 @@ async def set_not_afk(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
-                "Sam Ramadhan sekarang sudah tidak AFK"
+                "#Laporan_AFK Boss saya sekarang sudah tidak AFK"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
@@ -145,7 +145,7 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **yang lalu**"
         msg = None
-        message_to_reply = f"**Saat ini Boss saya sedang AFK**\nAFK semenjak `{total_afk_time}` yang lalu\n**Kapan dia aktif?** : `Saya juga tidak tahu` " + \
+        message_to_reply = f"**Saat ini Boss saya sedang AFK**\n\nAFK semenjak `{total_afk_time}` yang lalu\n**Kapan dia aktif?** : `Saya juga tidak tahu` " + \
             f"\n\n__Jika ada perlu, mohon tunggu sampai dia aktif__\n**Karena dia sedang**: {reason}" \
             if reason \
             else f"**Maaf, saat ini Boss saya sedang AFK**\n__Dia tidak memberi tahu apa yang akan dia lakukan. Anda mau tahu sejak kapan dia AFK? Sejak {total_afk_time} yang lalu.__\n\nDia pasti akan merespon ketika dia aktif. __Mungkin saja dia sedang sibuk sekarang, mohon pengertiannya.__ **Terima Kasih**  "
