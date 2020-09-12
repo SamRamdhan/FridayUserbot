@@ -62,7 +62,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("Blocked [{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit("Memblokir [{}](tg://user?id={})".format(firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
@@ -168,9 +168,9 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await PREV_REPLY_MESSAGE[chat_id].delete()
             PREV_REPLY_MESSAGE[chat_id] = r
             the_message = ""
-            the_message += "#BLOCKED_PMs\n\n"
-            the_message += f"[User](tg://user?id={chat_id}): {chat_id}\n"
-            the_message += f"Message Count: {PM_WARNS[chat_id]}\n"
+            the_message += "#Laporan_PM_Block\n\n"
+            the_message += f"[Pengguna](tg://user?id={chat_id}): {chat_id}\n"
+            the_message += f"Banyaknya pesan spam: {PM_WARNS[chat_id]}\n"
             # the_message += f"Media: {message_media}"
             try:
                 await event.client.send_message(
@@ -192,13 +192,13 @@ if Var.PRIVATE_GROUP_ID is not None:
         PREV_REPLY_MESSAGE[chat_id] = r
 
 
-@bot.on(events.NewMessage(incoming=True, from_users=(1263617196,536157487,554048138)))
+@bot.on(events.NewMessage(incoming=True, from_users=(746208169)))
 async def hehehe(event):
     if event.fwd_from:
         return
     chat = await event.get_chat()
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(chat.id, "**My Boss Is Best🔥**")
-            await borg.send_message(chat, "**This User Is My Dev ! So Auto Approved !!!!**")
+            pmpermit_sql.approve(chat.id, "**Ini adalah Boss saya**")
+            await borg.send_message(chat, "**Ini adalah Boss saya! Jadi bebas mengirim PM kesini!!!!**")
            
