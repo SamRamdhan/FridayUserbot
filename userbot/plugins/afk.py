@@ -52,7 +52,7 @@ async def _(event):
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
-                Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
+                Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
                 f"Sam Ramadhan sekarang AFK, alasannya {reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
@@ -75,7 +75,7 @@ async def set_not_afk(event):
         shite = await borg.send_message(event.chat_id, "__Back alive!__\n**No Longer afk.**\n `Was afk for:``" + total_afk_time + "`")
         try:
             await borg.send_message(  # pylint:disable=E0602
-                Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
+                Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
                 "Sam Ramadhan sekarang sudah tidak AFK"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
@@ -83,7 +83,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Mohon tetapkan terlebih dahulu `PRIVATE_GROUP_BOT_API_ID` " + \
                 "untuk memaksimalkan fungsi AFK" + \
-                "Jika anda tidak tahu caranya\nSilahkan tanyakan pada @SamRamadhan.\n\n `{}`".format(str(e)),
+                " Jika anda tidak tahu caranya\nSilahkan tanyakan pada @SamRamadhan.\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True
             )
@@ -109,7 +109,7 @@ async def on_afk(event):
     afk_end = back_alivee.replace(microsecond=0)
     if afk_start != {}:
         total_afk_time = str((afk_end - afk_start))
-    afk_since = "**a while ago**"
+    afk_since = "**beberapa saat yang lalu**"
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
         # userbot's should not reply to other userbot's
@@ -145,7 +145,7 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"**Saat ini Boss saya sedang AFK**\n AFK semenjak `{total_afk_time}` yang lalu\n**Kapan dia aktif?** : `Saya juga tidak tahu` " + \
+        message_to_reply = f"**Saat ini Boss saya sedang AFK**\nAFK semenjak `{total_afk_time}` yang lalu\n**Kapan dia aktif?** : `Saya juga tidak tahu` " + \
             f"\n\n__Jika ada perlu, mohon tunggu sampai dia aktif__\n**Karena dia sedang**: {reason}" \
             if reason \
             else f"**Maaf, saat ini Boss saya sedang AFK**\n__Dia tidak memberi tahu apa yang akan dia lakukan. Anda mau tahu sejak kapan dia AFK? Sejak {total_afk_time} yang lalu.__\n\nDia pasti akan merespon ketika dia aktif. __Mungkin saja dia sedang sibuk sekarang, mohon pengertiannya.__ **Terima Kasih**  "
