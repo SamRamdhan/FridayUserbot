@@ -72,7 +72,7 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        shite = await borg.send_message(event.chat_id, "__Back alive!__\n**No Longer afk.**\n `Was afk for:``" + total_afk_time + "`")
+        shite = await borg.send_message(event.chat_id, "__Kembali aktif!__\n**Sekarang Boss saya sudah tidak AFK.**\n `Total waktu AFK:``" + total_afk_time + "`")
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
@@ -81,7 +81,7 @@ async def set_not_afk(event):
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
-                "Mohon tetapkan terlebih dahulu `PRIVATE_GROUP_BOT_API_ID` " + \
+                "Mohon tetapkan terlebih dahulu `PLUGIN_CHANNEL` " + \
                 "untuk memaksimalkan fungsi AFK" + \
                 " Jika anda tidak tahu caranya\nSilahkan tanyakan pada @SamRamadhan.\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
@@ -128,7 +128,7 @@ async def on_afk(event):
             time %= 60
             seconds = time
             if days == 1:
-                afk_since = "**Yesterday**"
+                afk_since = "**Kemarin**"
             elif days > 1:
                 if days > 6:
                     date = now + \
@@ -139,11 +139,11 @@ async def on_afk(event):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime('%A')
             elif hours > 1:
-                afk_since = f"`{int(hours)}h{int(minutes)}m` **ago**"
+                afk_since = f"`{int(hours)}h{int(minutes)}m` **yang lalu**"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}m{int(seconds)}s` **ago**"
+                afk_since = f"`{int(minutes)}m{int(seconds)}s` **yang lalu**"
             else:
-                afk_since = f"`{int(seconds)}s` **ago**"
+                afk_since = f"`{int(seconds)}s` **yang lalu**"
         msg = None
         message_to_reply = f"**Saat ini Boss saya sedang AFK**\nAFK semenjak `{total_afk_time}` yang lalu\n**Kapan dia aktif?** : `Saya juga tidak tahu` " + \
             f"\n\n__Jika ada perlu, mohon tunggu sampai dia aktif__\n**Karena dia sedang**: {reason}" \
