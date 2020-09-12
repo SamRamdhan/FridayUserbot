@@ -45,15 +45,15 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
-            await borg.send_message(event.chat_id, f"**I shall be Going afk!** __because ~ {reason}__")
+            await borg.send_message(event.chat_id, f"**Boss saya sekarang AFK!** __Alasannya ~ {reason}__")
         else:
-            await borg.send_message(event.chat_id, f"**I am Going afk!**")
+            await borg.send_message(event.chat_id, f"**Boss saya AFK sekarang!**")
         await asyncio.sleep(5)
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                f"Set AFK mode to True, and Reason is {reason}"
+                f"Sam Ramadhan sekarang AFK, alasannya {reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
@@ -76,14 +76,14 @@ async def set_not_afk(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                "Set AFK mode to False"
+                "Sam Ramadhan sekarang sudah tidak AFK"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
-                "Please set `PRIVATE_GROUP_BOT_API_ID` " + \
-                "for the proper functioning of afk functionality " + \
-                "in @xtratgbot\nCheck pinned message for more info.\n\n `{}`".format(str(e)),
+                "Mohon tetapkan terlebih dahulu `PRIVATE_GROUP_BOT_API_ID` " + \
+                "untuk memaksimalkan fungsi AFK" + \
+                "Jika anda tidak tahu caranya\nSilahkan tanyakan pada @SamRamadhan.\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True
             )
@@ -145,10 +145,10 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"__My Master Has Been Gone For__ `{total_afk_time}`\nWhere He Is: ~~ONLY GOD KNOWS~~ " + \
-            f"\n\n__I promise I'll back in a few light years__\n**REASON**: {reason}" \
+        message_to_reply = f"**Saat ini Boss saya sedang AFK**\n AFK semenjak `{total_afk_time}` yang lalu\n**Kapan dia aktif?** : `Saya juga tidak tahu` " + \
+            f"\n\n__Jika ada perlu, mohon tunggu sampai dia aktif__\n**Karena dia sedang**: {reason}" \
             if reason \
-            else f"**Heya!**\n__I am currently unavailable. Since when, you ask? For {total_afk_time} I guess.__\n\nWhen will I be back? ~~Soon~~ __Whenever I feel like it__**( ಠ ʖ̯ ಠ)**  "
+            else f"**Maaf, saat ini Boss saya sedang AFK**\n__Dia tidak memberi tahu apa yang akan dia lakukan. Anda mau tahu sejak kapan dia AFK? Sejak {total_afk_time} yang lalu.__\n\nDia pasti akan merespon ketika dia aktif. __Mungkin saja dia sedang sibuk sekarang, mohon pengertiannya.__ **Terima Kasih**  "
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
