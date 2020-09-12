@@ -14,7 +14,7 @@ async def _(event):
     mone = await event.reply("Ping 🥍")
     end = datetime.now()
     ms = (end - start).microseconds * 0.00001
-    await mone.edit("‎‎‎‎‎‎‎‎Ping 🥍 kecepatan server anda `{} ms`".format(ms))
+    await mone.edit("‎‎‎‎‎‎‎‎Ping 🥍 kecepatan server `{} ms`".format(ms))
  
 
 def get_readable_time(seconds: int) -> str:
@@ -54,4 +54,4 @@ async def _(event):
     await event.edit("Pong 🏓")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await event.edit(f"Pong 🏓 kecepatan server anda `{ms}`")
+    await event.edit(f"Pong 🏓 kecepatan respon bot `{ms}`")
