@@ -15,19 +15,34 @@ from userbot import ALIVE_NAME
 SLAP_TEMPLATES = [
     "{user1} {hits} {user2} memakai {item}.",
     "{user1} {hits} {user2} dengan keras menggunakan {item}.",
-    "{user1} {hits} {user2} menggunakan {item}.",
+    "{user1} {hits} {user2} menggunakan sebuah {item}.",
     "{user1} {throws} sebuah {item} ke wajah {user2}.",
     "{user1} mengambil {item} kemudian {throws} ke {user2} hingga terkapar.",
     "{user1} melempar {item} ke {user2} hingga sekarat.",
-    "{user1} memfitnah {user2} telah mencuri {item}.",
-    "{user1} berdiri dibelakang {user2} kemudian {hits} menggunakan {item}.",
+    "{user1} menghantam wajah {user2} dengan sebuah {item}.",
+    "{user1} berdiri dibelakang {user2} kemudian {hits} dia menggunakan {item}.",
     "{user1} meraih sebuah {item} lalu {hits} {user2} dengan keras.",
     "{user1} membanting {user2} ke lantai kemudian {throws} sebuah {item} dengan keras.",
-    "{user1} mendorong dengan keras {user2} ke jurang penyesalan paling dalam."
+    "{user1} mendorong dengan keras {user2} ke jurang penyesalan paling dalam.",
+    "{user1} menendang wajah {user2} dengan taijutsu kick.",
+    "{user1} memanggil seluruh warga untuk mengeroyok {user2}.",
+    "{user2} memukul kepalanya sendiri menggunakan {item}.",
+    "{user2} mengambil sebuah {item} kemudian {throws} itu ke wajahnya sendiri sampai berdarah.",
+    "{user1} mengikat kemudian menggelitik {user2} hingga lemas.",
+    "{user2} mencoba merayu {user1} namun {user2} malah ditampol menggunakan {item}.",
+    "{user1} mengirim nuklir aktif ke rumah {user2}.",
+    "{user2} menjadi gila karena cintanya ditolak {user1}.",
+    "{user1} {throws} sebuah {item} ke kepala {user2} dengan kencang.",
+    "{user1} meretas akun sosmed {user2} kemudian memposting semua foto aib {user2}.",
+    "{user1} mengikat {user2} di tiang listrik lalu menabraknya.",
+    "{user2} meminum kopi buatan {user1} yang telah diberi sianida.",
+    "{user2} sedang kesal lalu dia {throws} sebuah {item} ke dirinya sendiri.",
+    "{user1} diam-diam mengambil rapor untuk melihat nama bapak {user2}.",
+    "{user1} mengambil ikan tongkol lalu {throws} itu ke kepala {user2} yang sedang bersepeda."
 ]
 
 ITEMS = [
-    "majalah bobo",
+    "kapak",
     "sendal swallow",
     "helm gojek",
     "TV tabung",
@@ -39,7 +54,7 @@ ITEMS = [
     "powerbank",
     "sepatu laras",
     "spion kopaja",
-    "patung Hitler",
+    "keranjang besi",
     "ranting pohon",
     "semvak firaun",
     "roda becak",
@@ -48,7 +63,7 @@ ITEMS = [
     "stang motor supra",
     "galon AQUA",
     "botol marjan",
-    "ransel Tentara",
+    "helm Tentara",
     "sepatu Polisi",
     "tumpukan batako",
     "wajan gosong",
@@ -73,7 +88,7 @@ HIT = [
     "menghantam",
 ]
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "FridayUserbot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "SamRamadhan"
 
 @borg.on(admin_cmd(pattern="slap ?(.*)", allow_sudo=True))
 async def who(event):
