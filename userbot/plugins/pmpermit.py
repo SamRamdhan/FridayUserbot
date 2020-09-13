@@ -89,9 +89,9 @@ if Var.PRIVATE_GROUP_ID is not None:
         if len(approved_users) > 0:
             for a_user in approved_users:
                 if a_user.reason:
-                    APPROVED_PMs += f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) for {a_user.reason}\n"
+                    APPROVED_PMs += f"➡ [{a_user.chat_id}](tg://user?id={a_user.chat_id})\n **Karena dia** `{a_user.reason}`\n\n"
                 else:
-                    APPROVED_PMs += f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id})\n"
+                    APPROVED_PMs += f"➡ [{a_user.chat_id}](tg://user?id={a_user.chat_id})\n"
         else:
             APPROVED_PMs = "no Approved PMs (yet)"
         if len(APPROVED_PMs) > 4095:
@@ -199,6 +199,6 @@ async def hehehe(event):
     chat = await event.get_chat()
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(chat.id, "**Ini adalah Boss saya**")
-            await borg.send_message(chat, "**Ini adalah Boss saya! Jadi bebas mengirim PM kesini!!!!**")
+            pmpermit_sql.approve(chat.id, "**Orang yang spesial**")
+            await borg.send_message(chat, "**Orang ini adalah Boss saya! Jadi bebas mengirim PM kesini!!!!**")
            
