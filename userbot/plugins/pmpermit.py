@@ -47,7 +47,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, reason)
                 await event.edit("Diberi akses untuk PM [{}](tg://user?id={})".format(firstname, chat.id))
-                await asyncio.sleep(3)
+                await asyncio.sleep(7)
                 await event.delete()
 
 
@@ -63,7 +63,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
                 await event.edit("Memblokir [{}](tg://user?id={})".format(firstname, chat.id))
-                await asyncio.sleep(3)
+                await asyncio.sleep(10)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
     @command(pattern="^.disapprove ?(.*)")
