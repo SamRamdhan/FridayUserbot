@@ -120,7 +120,7 @@ async def get_weather(weather):
 
     await weather.edit(
         f"🌡**Suhu:** `{celsius(curtemp)}°C | {fahrenheit(curtemp)}°F`\n" +
-        f"🤔**Perkiraan Manusia** `{celsius(feel)}°C | {fahrenheit(feel)}°F`\n" +
+        f"🤔**Perasaan Manusia** `{celsius(feel)}°C | {fahrenheit(feel)}°F`\n" +
         f"🥶**Suhu Minimum:** `{celsius(min_temp)}°C | {fahrenheit(min_temp)}°F`\n" +
         f"🥵**Suhu Maximum:** `{celsius(max_temp)}°C | {fahrenheit(max_temp)}°F`\n" +
         f"🌫️**Kelembapan:** `{humidity}%`\n" + 
