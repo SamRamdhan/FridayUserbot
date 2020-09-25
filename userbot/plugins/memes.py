@@ -590,17 +590,17 @@ CRI = [
 ]
 
 SLAP_TEMPLATES = [
-    "@SamRamadhan {hits} {victim} dengan mesra di {item}.",
-    "@SamRamadhan {hits} {victim} saat berada di {item}.",
-    "@SamRamadhan {hits} {victim} di {item}.",
-    "@SamRamadhan diajak {victim} ke {item} kemudian mereka {throws}.",
-    "@SamRamadhan pergi ke {item} kemudian {throws} dengan {victim} sampai puas.",
-    "@SamRamadhan berada di {item} dan sedang bermesraan dengan {victim}.",
-    "@SamRamadhan diajak {victim} untuk bermesraan di {item}.",
-    "@SamRamadhan {hits} dengan mesra {victim} di {item}.",
-    "@SamRamadhan diajak untuk pergi ke {item} dan {throws} dengan {victim} sampai puas.",
-    "@SamRamadhan bersama {victim} sedang {throws} di {item}.",
-    "@SamRamadhan dipaksa oleh {victim} untuk {throws}."
+    " {hits} {victim} dengan mesra di {item}.",
+    " {hits} {victim} saat berada di {item}.",
+    " {hits} {victim} di {item}.",
+    " diajak {victim} ke {item} kemudian mereka {throws}.",
+    " pergi ke {item} kemudian {throws} dengan {victim} sampai puas.",
+    " berada di {item} dan sedang bermesraan dengan {victim}.",
+    " diajak {victim} untuk bermesraan di {item}.",
+    " {hits} dengan mesra {victim} di {item}.",
+    " diajak untuk pergi ke {item} dan {throws} dengan {victim} sampai puas.",
+    " bersama {victim} sedang {throws} di {item}.",
+    " dipaksa oleh {victim} untuk {throws}."
 ]
 
 ITEMS = [
@@ -750,7 +750,7 @@ async def slap(replied_user, event):
     hit = random.choice(HIT)
     throw = random.choice(THROW)
 
-    caption = "..." + temp.format(victim=slapped, item=item, hits=hit, throws=throw)
+    caption = "@SamRamadhan" + temp.format(victim=slapped, item=item, hits=hit, throws=throw)
 
     return caption
 
@@ -832,7 +832,7 @@ async def vapor(vpr):
         elif textx:
             message = textx.text
         else:
-            await vpr.edit("`Ｇｉｖｅ ｓｏｍｅ ｔｅｘｔ ｆｏｒ ｖａｐｏｒ！`")
+            await vpr.edit("`R e p l y   p e s a n ！`")
             return
 
         for charac in message:
@@ -846,15 +846,15 @@ async def vapor(vpr):
         await vpr.edit("".join(reply_text))
 
 			  
-@register(outgoing=True, pattern="^.repo$")
+@register(outgoing=True, pattern="^.repoku$")
 async def repo(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("Hey ! I am Using [Friday Userbot](https://github.com/StarkGang/FridayUserbot) !")
+        await e.edit("Mau pake userbot juga? Silahkan fork [Sam Ramadhan Userbot](https://github.com/SamRamdhan/FridayUserbot) dan ubah beberapa modul sesuai dengan kebutuhan anda, kemudian deploy di Heroku!")
 
-@register(outgoing=True, pattern="^.fridayuserbot$")
+@register(outgoing=True, pattern="^.asalcoret$")
 async def source(sed):
     if not sed.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await sed.edit("View Source Code By Clicking [Here](https://github.com/StarkGang/FridayUserbot) !")
+        await sed.edit("[Ruang Aksara](https://t.me/asalcoret)")
 				  
 @register(outgoing=True, pattern="^.str(?: |$)(.*)")
 async def stretch(stret):
