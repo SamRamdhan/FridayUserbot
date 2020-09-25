@@ -25,7 +25,7 @@ async def _(event):
         message_id = event.reply_to_msg_id
         reply_message = await event.get_reply_message()
         # check if media message
-        await event.edit("Connecting to official Friday server and analysing that img ...")
+        await event.edit("Proses menghapus latar...")
         try:
             downloaded_file_name = await borg.download_media(
                 reply_message,
@@ -35,11 +35,11 @@ async def _(event):
             await event.edit(str(e))
             return
         else:
-            await event.edit("sending to ReMove.BG")
+            await event.edit("Mengirim ke ReMove.BG")
             output_file_name = ReTrieveFile(downloaded_file_name)
             os.remove(downloaded_file_name)
     elif input_str:
-        await event.edit("sending to ReMove.BG")
+        await event.edit("Mengirim ke ReMove.BG")
         output_file_name = ReTrieveURL(input_str)
     else:
         await event.edit(HELP_STR)
@@ -60,7 +60,7 @@ async def _(event):
         ms = (end - start).seconds
         await event.edit("Background telah dihapus dalam waktu {} detik, powered by  Sam Ramadhan".format(ms))
     else:
-        await event.edit("ReMove.BG API returned Errors. Please report to @FridayOt Support Group\n`{}".format(output_file_name.content.decode("UTF-8")))
+        await event.edit("ReMove.BG API harus diganti. Silahkan sampaikan ke Boss saya @SamRamadhan\n`{}".format(output_file_name.content.decode("UTF-8")))
 
 
 # this method will call the API, and return in the appropriate format
